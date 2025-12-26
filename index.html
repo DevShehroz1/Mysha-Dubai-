@@ -1401,6 +1401,116 @@ url("https://static.wixstatic.com/ufonts/c79f9d_03cbc78483fc4a3cb21c18905add3f2d
     <script type="wix/htmlEmbeds" id="pageHtmlEmbeds.bodyStart end"></script>
     <!--pageHtmlEmbeds.bodyStart end-->
 
+<style>
+/* Smooth scrolling for anchor links */
+html {
+    scroll-behavior: smooth;
+}
+</style>
+
+<script>
+// Smooth scrolling for anchor links - Enhanced version for Wix (runs early)
+(function() {
+    function scrollToAnchor(anchorId) {
+        let targetElement = document.getElementById(anchorId);
+        
+        // Try alternative selectors if direct ID doesn't work
+        if (!targetElement) {
+            targetElement = document.querySelector('[id="' + anchorId + '"]');
+        }
+        
+        if (targetElement) {
+            // Small delay to ensure layout is calculated
+            setTimeout(function() {
+                // Calculate offset for fixed header
+                const header = document.getElementById('SITE_HEADER');
+                const headerHeight = header ? header.offsetHeight : 0;
+                const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - headerHeight - 20;
+                
+                // Smooth scroll to target
+                window.scrollTo({
+                    top: Math.max(0, targetPosition),
+                    behavior: 'smooth'
+                });
+            }, 10);
+            
+            return true;
+        }
+        return false;
+    }
+    
+    function handleAnchorClick(e) {
+        const anchor = e.target.closest('a');
+        if (!anchor) return;
+        
+        // Check for href with hash
+        const href = anchor.getAttribute('href');
+        let targetId = null;
+        
+        if (href && href.startsWith('#')) {
+            targetId = href.substring(1);
+        } else if (anchor.hasAttribute('data-anchor')) {
+            // Wix uses data-anchor attribute
+            const dataAnchor = anchor.getAttribute('data-anchor');
+            if (dataAnchor) {
+                targetId = dataAnchor;
+            }
+        }
+        
+        if (targetId && targetId !== '') {
+            const scrolled = scrollToAnchor(targetId);
+            if (scrolled) {
+                e.preventDefault();
+                e.stopPropagation();
+                e.stopImmediatePropagation();
+                
+                // Update URL without reload
+                if (history.pushState) {
+                    history.pushState(null, null, '#' + targetId);
+                }
+                
+                return false;
+            }
+        }
+    }
+    
+    // Use event delegation on document to catch all clicks (capture phase - runs first)
+    document.addEventListener('click', handleAnchorClick, true);
+    
+    // Also attach when DOM is ready
+    function attachHandler() {
+        document.addEventListener('click', handleAnchorClick, true);
+    }
+    
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', attachHandler);
+    } else {
+        attachHandler();
+    }
+    
+    // Handle hash links on page load
+    if (window.location.hash) {
+        setTimeout(function() {
+            const hash = window.location.hash.substring(1);
+            scrollToAnchor(hash);
+        }, 500);
+    }
+    
+    // Also handle Wix's navigation if it exists
+    if (window.wixBiSession) {
+        const originalNavigate = window.wixBiSession.reportPageNavigation;
+        if (originalNavigate) {
+            window.wixBiSession.reportPageNavigation = function(pageId) {
+                // Let Wix handle its own navigation, but we'll intercept anchor clicks
+                if (originalNavigate) {
+                    originalNavigate.call(this, pageId);
+                }
+            };
+        }
+    }
+})();
+</script>
+
 
 
 
@@ -3249,46 +3359,6 @@ observer.observe(document.body, {
     
     // Listen for scroll events
     window.addEventListener('scroll', handleScroll, { passive: true });
-})();
-</script>
-
-<script>
-// Smooth scrolling for anchor links
-(function() {
-    // Add smooth scroll behavior to all anchor links
-    document.addEventListener('DOMContentLoaded', function() {
-        // Handle clicks on anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
-            anchor.addEventListener('click', function(e) {
-                const href = this.getAttribute('href');
-                // Only handle if it's an anchor link (starts with #)
-                if (href && href.startsWith('#')) {
-                    const targetId = href.substring(1);
-                    const targetElement = document.getElementById(targetId);
-                    
-                    if (targetElement) {
-                        e.preventDefault();
-                        
-                        // Calculate offset for fixed header
-                        const header = document.getElementById('SITE_HEADER');
-                        const headerHeight = header ? header.offsetHeight : 0;
-                        const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - headerHeight;
-                        
-                        // Smooth scroll to target
-                        window.scrollTo({
-                            top: targetPosition,
-                            behavior: 'smooth'
-                        });
-                        
-                        // Update URL without reload
-                        if (history.pushState) {
-                            history.pushState(null, null, href);
-                        }
-                    }
-                }
-            });
-        });
-    });
 })();
 </script>
 
