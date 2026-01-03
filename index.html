@@ -17407,6 +17407,67 @@
             padding-bottom: 0 !important;
         }
 
+        /* Our Team Section - Instagram Style Layout */
+        #comp-our-team-section {
+            padding: 60px 20px;
+            background-color: #ffffff;
+        }
+
+        #comp-our-team-heading {
+            margin-bottom: 50px !important;
+        }
+
+        #comp-our-team-grid_wrapper {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .comp-our-team-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .comp-our-team-img img {
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .comp-our-team-img img:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .comp-our-team-name h3 {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            justify-content: center;
+            margin: 15px 0 0 0;
+        }
+
+        .comp-our-team-name a {
+            display: inline-flex;
+            align-items: center;
+            transition: opacity 0.3s ease;
+        }
+
+        .comp-our-team-name a:hover {
+            opacity: 0.7;
+        }
+
+        @media (max-width: 768px) {
+            #comp-our-team-grid_wrapper fluid-columns-repeater {
+                flex-direction: column;
+            }
+
+            .comp-our-team-item {
+                margin-bottom: 30px;
+            }
+        }
+
         #comp-mamgjyks {
             margin-bottom: 0 !important;
             padding-bottom: 0 !important;
@@ -25466,6 +25527,137 @@
                                                             </div>
                                                         </div>
                                                     </section>
+                                                    <style>
+/* =====================================
+   OUR TEAM SECTION – CLEAN OVERRIDES
+===================================== */
+
+/* Ensure white background and no divider */
+#our-team-section {
+  background: #ffffff !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0;
+}
+
+/* Grid container */
+.our-team-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* ALWAYS 3 */
+  gap: 30px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Individual card */
+.our-team-card {
+  background: #ffffff; /* WHITE background */
+  box-shadow: none !important; /* remove shadow */
+  transform: none !important; /* remove uplift */
+  transition: none !important;
+  text-align: center;
+}
+
+/* Disable hover effects completely */
+.our-team-card:hover {
+  box-shadow: none !important;
+  transform: none !important;
+}
+
+/* Image styling */
+.our-team-card img.profile {
+  width: 100%;
+  max-width: 260px;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Name + icon */
+.our-team-name {
+  margin-top: 15px;
+  font-size: 21px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Instagram icon */
+.our-team-name img {
+  width: 22px;
+  height: 22px;
+}
+
+/* =====================================
+   MOBILE – FORCE 3 IN ONE ROW
+===================================== */
+@media (max-width: 768px) {
+  .our-team-grid {
+    grid-template-columns: repeat(3, 1fr); /* STILL 3 */
+    gap: 15px;
+  }
+
+  .our-team-name {
+    font-size: 16px;
+  }
+}
+</style>
+
+<!-- ===== START OF OUR TEAM SECTION ===== -->
+<section id="our-team-section">
+
+  <h2 style="text-align:center; font-size:40px; margin-bottom:50px;">
+    Our Team
+  </h2>
+
+  <div class="our-team-grid">
+
+    <!-- TEAM MEMBER 1 -->
+    <div class="our-team-card">
+      <img class="profile"
+           src="https://static.wixstatic.com/media/a25ca6_b24a81fe7ff34b4abc43b164fb115100~mv2.jpg"
+           alt="Team Member 1">
+      <div class="our-team-name">
+        <span>Team Member 1</span>
+        <a href="https://www.instagram.com/myshaproperties" target="_blank" rel="noopener">
+          <img src="https://static.wixstatic.com/media/11062b_55e4be1e75564866b6c28290f9a9d271~mv2.png" alt="Instagram">
+        </a>
+      </div>
+    </div>
+
+    <!-- TEAM MEMBER 2 -->
+    <div class="our-team-card">
+      <img class="profile"
+           src="https://static.wixstatic.com/media/a25ca6_8b5572124e7e4ebb9ec1f5e653d9b9e9~mv2.jpg"
+           alt="Team Member 2">
+      <div class="our-team-name">
+        <span>Team Member 2</span>
+        <a href="https://www.instagram.com/myshaproperties" target="_blank" rel="noopener">
+          <img src="https://static.wixstatic.com/media/11062b_55e4be1e75564866b6c28290f9a9d271~mv2.png" alt="Instagram">
+        </a>
+      </div>
+    </div>
+
+    <!-- TEAM MEMBER 3 -->
+    <div class="our-team-card">
+      <img class="profile"
+           src="https://static.wixstatic.com/media/a25ca6_acd26933992d48c9a637b99b94c11e2b~mv2.jpg"
+           alt="Team Member 3">
+      <div class="our-team-name">
+        <span>Team Member 3</span>
+        <a href="https://www.instagram.com/myshaproperties" target="_blank" rel="noopener">
+          <img src="https://static.wixstatic.com/media/11062b_55e4be1e75564866b6c28290f9a9d271~mv2.png" alt="Instagram">
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+<!-- ===== END OF OUR TEAM SECTION ===== -->
+
                                                     <section id="comp-mamcpk1p" tabindex="-1"
                                                         class="Oqnisf comp-mamcpk1p wixui-section"
                                                         data-block-level-container="ClassicSection">
