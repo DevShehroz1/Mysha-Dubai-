@@ -35418,7 +35418,7 @@ Your dream home is just a message away 🏡✨
                                                                         class="IxULAm"><span class="SC2Ukt fIxawB"><a
                                                                                 data-testid="linkElement-1"
                                                                                 data-anchor="anchors-mam217k0"
-                                                                                href="index.html" target="_self"
+                                                                                href="#anchors-mam217k0" target="_self"
                                                                                 class="IkoBbi Ur5Vmd wixui-vertical-menu__item-label"
                                                                                 tabindex="0">SERVICES</a></span></div>
                                                                 </li>
@@ -36006,15 +36006,38 @@ Your dream home is just a message away 🏡✨
         // Fix SERVICES navigation link anchor
         (function () {
             function fixServicesLink() {
-                // Find all SERVICES links in navigation menus
-                const servicesLinks = document.querySelectorAll('a[data-testid="linkElement-1"]');
-                servicesLinks.forEach(link => {
-                    // Check if it's the SERVICES link (contains "SERVICES" text or has wrong anchor)
+                // Find all SERVICES links by text content
+                document.querySelectorAll('a').forEach(link => {
                     const linkText = link.textContent.trim();
                     if (linkText === 'SERVICES') {
                         // Ensure it points to the correct anchor (Our Expertise section)
-                        if (link.getAttribute('data-anchor') !== 'anchors-mam217k0') {
-                            link.setAttribute('data-anchor', 'anchors-mam217k0');
+                        link.setAttribute('data-anchor', 'anchors-mam217k0');
+                        link.setAttribute('href', '#anchors-mam217k0');
+                        
+                        // Remove any existing click handlers by cloning
+                        if (!link.hasAttribute('data-services-fixed')) {
+                            link.setAttribute('data-services-fixed', 'true');
+                            
+                            // Add click handler to ensure correct scrolling
+                            link.addEventListener('click', function(e) {
+                                const targetAnchor = document.getElementById('anchors-mam217k0');
+                                if (targetAnchor) {
+                                    e.preventDefault();
+                                    e.stopPropagation();
+                                    e.stopImmediatePropagation();
+                                    const header = document.getElementById('SITE_HEADER');
+                                    const headerHeight = header ? header.offsetHeight : 0;
+                                    const targetPosition = targetAnchor.getBoundingClientRect().top + window.pageYOffset - headerHeight - 20;
+                                    window.scrollTo({
+                                        top: Math.max(0, targetPosition),
+                                        behavior: 'smooth'
+                                    });
+                                    if (history.pushState) {
+                                        history.pushState(null, null, '#anchors-mam217k0');
+                                    }
+                                    return false;
+                                }
+                            }, true); // Use capture phase to run before other handlers
                             console.log('Fixed SERVICES link anchor to anchors-mam217k0');
                         }
                     }
