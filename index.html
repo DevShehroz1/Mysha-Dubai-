@@ -24551,47 +24551,18 @@
                                                                                                                                                         <span
                                                                                                                                                             data-hook="prefix"
                                                                                                                                                             class="saCYsbx">
-                                                                                                                                                            <div data-content-hook="popover-content--undefined"
-                                                                                                                                                                class="s__56W2RS su1RluJ saVZtCV">
-                                                                                                                                                                <div class="sYFcRGd"
-                                                                                                                                                                    data-hook="popover-element">
-                                                                                                                                                                    <button
-                                                                                                                                                                        data-hook="country-selector-trigger"
-                                                                                                                                                                        aria-label="Phone. Phone. Select a country code"
-                                                                                                                                                                        type="button"
-                                                                                                                                                                        class="szFDnqX sIX_NIC srY4ND7 ozwqoUs---skin-4-line ozwqoUs---theme-4-none siZhHee sEP5wyL"
-                                                                                                                                                                        data-focusable-focus="false"
-                                                                                                                                                                        data-focusable-focus-visible="false"
-                                                                                                                                                                        tabindex="0"><span
-                                                                                                                                                                            class="sACMDCl"><span
-                                                                                                                                                                                class="sFjfXFT">
-                                                                                                                                                                                <div
-                                                                                                                                                                                    class="sNA6Tp0">
-                                                                                                                                                                                    <div
-                                                                                                                                                                                        class="s_BVJMF">
-                                                                                                                                                                                        <img src="/static.parastorage.com/services/linguist-flags/1.961.0/assets/flags/square/ARE.png"
-                                                                                                                                                                                            srcSet="https://static.parastorage.com/services/linguist-flags/1.961.0/assets/flags/square/ARE.png 1x, https://static.parastorage.com/services/linguist-flags/1.961.0/assets/flags/square/ARE_2x.png 2x"
-                                                                                                                                                                                            alt=""
-                                                                                                                                                                                            aria-hidden="true"
-                                                                                                                                                                                            loading="lazy"
-                                                                                                                                                                                            class="apfS60" />
-                                                                                                                                                                                    </div>
-                                                                                                                                                                                    <div
-                                                                                                                                                                                        class="svqg2c5">
-                                                                                                                                                                                        <svg viewBox="0 0 20 20"
-                                                                                                                                                                                            fill="currentColor"
-                                                                                                                                                                                            width="20"
-                                                                                                                                                                                            height="20">
-                                                                                                                                                                                            <path
-                                                                                                                                                                                                fill-rule="evenodd"
-                                                                                                                                                                                                d="M15.6478199,6.64528691 L16.3549267,7.35239369 L11.0627131,12.6461801 L11.0652534,12.6489483 L10.3581467,13.356055 L10.3557131,13.3531801 L10.3548199,13.3549267 L9.64771309,12.6478199 L9.64771309,12.6451801 L4.35471309,7.35228691 L5.06181987,6.64518013 L10.3547131,11.9381801 L15.6478199,6.64528691 Z">
-                                                                                                                                                                                            </path>
-                                                                                                                                                                                        </svg>
-                                                                                                                                                                                    </div>
-                                                                                                                                                                                </div>
-                                                                                                                                                                            </span></span></button>
-                                                                                                                                                                </div>
-                                                                                                                                                            </div>
+                                                                                                                                                            <input
+                                                                                                                                                                type="text"
+                                                                                                                                                                id="country-code-input"
+                                                                                                                                                                name="country_code"
+                                                                                                                                                                value="+971"
+                                                                                                                                                                placeholder="+971"
+                                                                                                                                                                maxlength="5"
+                                                                                                                                                                pattern="^\+[0-9]{1,4}$"
+                                                                                                                                                                title="Country Code (e.g., +971 for UAE, +1 for USA)"
+                                                                                                                                                                style="width: 70px; padding: 8px 6px; border: none; border-right: 1px solid #ddd; background: transparent; text-align: center; font-weight: normal; font-size: 14px; color: #333;"
+                                                                                                                                                                aria-label="Country Code (e.g., +971 for UAE)"
+                                                                                                                                                                class="country-code-input" />
                                                                                                                                                         </span><input
                                                                                                                                                             id="form-field-input-e03ca00e-f290-4905-d9c9-2f65db4f87ff-comp-manpcqaj-"
                                                                                                                                                             name="phone"
@@ -24602,9 +24573,10 @@
                                                                                                                                                             aria-invalid="false"
                                                                                                                                                             inputMode="tel"
                                                                                                                                                             required=""
+                                                                                                                                                            pattern="[0-9]*"
                                                                                                                                                             aria-label="Phone. Phone"
-                                                                                                                                                            type="phone"
-                                                                                                                                                            class="srGUrPm  has-custom-focus"
+                                                                                                                                                            type="tel"
+                                                                                                                                                            class="srGUrPm  has-custom-focus phone-number-input"
                                                                                                                                                             value="" />
                                                                                                                                                     </div>
                                                                                                                                                 </div>
@@ -24649,6 +24621,7 @@
                                                                                                                                                         class="s_kuTAQ has-custom-focus"
                                                                                                                                                         data-hook="text-area"
                                                                                                                                                         aria-label="What is your requirement?"
+                                                                                                                                                        required=""
                                                                                                                                                         aria-invalid="false"></textarea>
                                                                                                                                                 </div>
                                                                                                                                             </div>
@@ -24674,14 +24647,16 @@
                                                                                                                                                 data-fullwidth="false"
                                                                                                                                                 data-mobile="false"
                                                                                                                                                 data-hook="submit-button"
-                                                                                                                                                style="--wix-ui-tpa-button-font-size-default:16px;--wix-ui-tpa-button-line-height-default:1.5em"
+                                                                                                                                                id="form-submit-button"
+                                                                                                                                                style="--wix-ui-tpa-button-font-size-default:16px;--wix-ui-tpa-button-line-height-default:1.5em; opacity: 0.5; cursor: not-allowed;"
                                                                                                                                                 aria-live="assertive"
                                                                                                                                                 type="button"
                                                                                                                                                 class="szFDnqX sIX_NIC sQKcj8w oOFzeUo---paddingMode-16-explicitPaddings oOFzeUo--wrapContent oOFzeUo---hoverStyle-9-underline sBT6UjO og91ysU--upgrade sCcPpqJ sEqLk76"
                                                                                                                                                 data-focusable-focus="false"
                                                                                                                                                 data-focusable-focus-visible="false"
                                                                                                                                                 tabindex="0"
-                                                                                                                                                aria-disabled="false"><span
+                                                                                                                                                disabled=""
+                                                                                                                                                aria-disabled="true"><span
                                                                                                                                                     class="sACMDCl saVPhqp">SUBMIT</span></button>
                                                                                                                                         </div>
                                                                                                                                     </div>
@@ -35709,12 +35684,7 @@ Your dream home is just a message away 🏡✨
                                                                         class="Z_l5lU ku3DBC zQ9jDz qvSjx3 Vq6kJx comp-mamhkexf wixui-rich-text"
                                                                         data-testid="richTextElement">
                                                                         <p class="font_8 wixui-rich-text__text"
-                                                                            style="font-size:16px;">Office 601, B8
-                                                                            Building</p>
-
-                                                                        <p class="font_8 wixui-rich-text__text"
-                                                                            style="font-size:16px;">Al Barsha 1, Dubai,
-                                                                            UAE</p>
+                                                                            style="font-size:16px;">Office 601, B8 Building, Al Barsha 1, Dubai, UAE</p>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -36446,25 +36416,105 @@ Your dream home is just a message away 🏡✨
         })();
     </script>
 
-    <!-- Contact Form Email Handler -->
+    <!-- Contact Form Email Handler with Validation -->
     <script>
+        // Validation functions
+        function validateEmail(email) {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailRegex.test(email);
+        }
+        
+        function validatePhone(phone) {
+            // Only numbers allowed
+            const phoneRegex = /^[0-9]+$/;
+            return phoneRegex.test(phone) && phone.length >= 7;
+        }
+        
+        function validateName(name) {
+            return name.trim().length >= 2;
+        }
+        
+        function validateMessage(message) {
+            return message.trim().length >= 10;
+        }
+        
+        function validateCountryCode(countryCode) {
+            // Must start with + and have 1-4 digits
+            const countryCodeRegex = /^\+[0-9]{1,4}$/;
+            return countryCodeRegex.test(countryCode);
+        }
+        
+        function validateForm() {
+            const form = document.getElementById('form-531cc587-da1d-46f2-836a-56ffe92b8d05');
+            if (!form) return false;
+            
+            const name = (form.querySelector('input[name="name"]') || {}).value || '';
+            const email = (form.querySelector('input[name="email"]') || {}).value || '';
+            const countryCode = (form.querySelector('input[name="country_code"]') || {}).value || '';
+            const phone = (form.querySelector('input[name="phone"]') || {}).value || '';
+            const message = (form.querySelector('textarea[name="message"]') || {}).value || '';
+            
+            const isValid = 
+                validateName(name) &&
+                validateEmail(email) &&
+                validateCountryCode(countryCode) &&
+                validatePhone(phone) &&
+                validateMessage(message);
+            
+            return isValid;
+        }
+        
+        function updateSubmitButton() {
+            const submitButton = document.getElementById('form-submit-button');
+            if (!submitButton) return;
+            
+            const isValid = validateForm();
+            
+            if (isValid) {
+                submitButton.disabled = false;
+                submitButton.setAttribute('aria-disabled', 'false');
+                submitButton.style.opacity = '1';
+                submitButton.style.cursor = 'pointer';
+            } else {
+                submitButton.disabled = true;
+                submitButton.setAttribute('aria-disabled', 'true');
+                submitButton.style.opacity = '0.5';
+                submitButton.style.cursor = 'not-allowed';
+            }
+        }
+        
         function handleFormSubmit(event) {
             event.preventDefault();
             event.stopPropagation();
+            
+            // Final validation
+            if (!validateForm()) {
+                const form = event.target.closest('form') || event.target;
+                const name = (form.querySelector('input[name="name"]') || {}).value || '';
+                const email = (form.querySelector('input[name="email"]') || {}).value || '';
+                const countryCode = (form.querySelector('input[name="country_code"]') || {}).value || '';
+                const phone = (form.querySelector('input[name="phone"]') || {}).value || '';
+                const message = (form.querySelector('textarea[name="message"]') || {}).value || '';
+                
+                let errors = [];
+                if (!validateName(name)) errors.push('Name (at least 2 characters)');
+                if (!validateEmail(email)) errors.push('Valid Email address');
+                if (!validateCountryCode(countryCode)) errors.push('Valid Country Code (format: +XXX)');
+                if (!validatePhone(phone)) errors.push('Phone (numbers only, at least 7 digits)');
+                if (!validateMessage(message)) errors.push('Message (at least 10 characters)');
+                
+                alert('Please fill in all fields correctly:\n\n' + errors.join('\n'));
+                return false;
+            }
             
             // Get form data
             const form = event.target.closest('form') || event.target;
             const formData = new FormData(form);
             const name = formData.get('name') || '';
             const email = formData.get('email') || '';
+            const countryCode = formData.get('country_code') || '+971';
             const phone = formData.get('phone') || '';
             const message = formData.get('message') || '';
-            
-            // Validate required fields
-            if (!name || !email) {
-                alert('Please fill in all required fields (Name and Email).');
-                return false;
-            }
             
             // Create email subject and body
             const subject = encodeURIComponent('New Contact Form Submission from ' + name);
@@ -36472,7 +36522,7 @@ Your dream home is just a message away 🏡✨
                 'New Contact Form Submission\n\n' +
                 'Name: ' + name + '\n' +
                 'Email: ' + email + '\n' +
-                'Phone: ' + phone + '\n\n' +
+                'Phone: ' + countryCode + ' ' + phone + '\n\n' +
                 'Message/Requirement:\n' + message + '\n\n' +
                 '---\n' +
                 'This email was sent from the contact form on myshaproperties.com'
@@ -36488,32 +36538,115 @@ Your dream home is just a message away 🏡✨
             setTimeout(function() {
                 alert('Thank you for contacting us! Your email client should open. If it doesn\'t, please send an email to info@myshaproperties.co with your details.');
                 form.reset();
+                updateSubmitButton();
             }, 500);
             
             return false;
         }
         
-        // Handle submit button click (since it's type="button")
+        // Initialize form validation on page load
         document.addEventListener('DOMContentLoaded', function() {
             const form = document.getElementById('form-531cc587-da1d-46f2-836a-56ffe92b8d05');
-            if (form) {
-                // Find submit button
-                const submitButton = form.querySelector('button[data-hook="submit-button"]');
-                if (submitButton) {
-                    submitButton.addEventListener('click', function(e) {
-                        e.preventDefault();
-                        e.stopPropagation();
-                        handleFormSubmit(e);
-                    });
-                }
+            if (!form) return;
+            
+            // Get form fields
+            const nameInput = form.querySelector('input[name="name"]');
+            const emailInput = form.querySelector('input[name="email"]');
+            const countryCodeInput = form.querySelector('input[name="country_code"]');
+            const phoneInput = form.querySelector('input[name="phone"]');
+            const messageInput = form.querySelector('textarea[name="message"]');
+            const submitButton = document.getElementById('form-submit-button');
+            
+            // Country code validation
+            if (countryCodeInput) {
+                countryCodeInput.addEventListener('input', function(e) {
+                    // Ensure it starts with +
+                    if (e.target.value && !e.target.value.startsWith('+')) {
+                        e.target.value = '+' + e.target.value.replace(/[^0-9]/g, '');
+                    } else {
+                        // Only allow + and numbers
+                        e.target.value = '+' + e.target.value.replace(/[^0-9]/g, '');
+                    }
+                    // Limit to 5 characters (+ and up to 4 digits)
+                    if (e.target.value.length > 5) {
+                        e.target.value = e.target.value.substring(0, 5);
+                    }
+                    updateSubmitButton();
+                });
+                
+                countryCodeInput.addEventListener('blur', function() {
+                    // Ensure it has at least + and one digit
+                    if (!this.value || this.value === '+') {
+                        this.value = '+971';
+                    }
+                    updateSubmitButton();
+                });
             }
+            
+            // Phone number validation - only allow numbers
+            if (phoneInput) {
+                phoneInput.addEventListener('input', function(e) {
+                    // Remove any non-numeric characters
+                    e.target.value = e.target.value.replace(/[^0-9]/g, '');
+                    updateSubmitButton();
+                });
+                
+                phoneInput.addEventListener('keypress', function(e) {
+                    // Only allow numbers
+                    const char = String.fromCharCode(e.which);
+                    if (!/[0-9]/.test(char)) {
+                        e.preventDefault();
+                    }
+                });
+            }
+            
+            // Real-time validation for all fields
+            if (nameInput) {
+                nameInput.addEventListener('input', updateSubmitButton);
+                nameInput.addEventListener('blur', updateSubmitButton);
+            }
+            
+            if (emailInput) {
+                emailInput.addEventListener('input', updateSubmitButton);
+                emailInput.addEventListener('blur', function() {
+                    if (this.value && !validateEmail(this.value)) {
+                        this.setCustomValidity('Please enter a valid email address');
+                    } else {
+                        this.setCustomValidity('');
+                    }
+                    updateSubmitButton();
+                });
+            }
+            
+            if (messageInput) {
+                messageInput.addEventListener('input', updateSubmitButton);
+                messageInput.addEventListener('blur', updateSubmitButton);
+            }
+            
+            // Handle submit button click
+            if (submitButton) {
+                submitButton.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    if (!submitButton.disabled) {
+                        handleFormSubmit(e);
+                    }
+                });
+            }
+            
+            // Handle form submission
+            form.addEventListener('submit', handleFormSubmit);
+            
+            // Initial button state
+            updateSubmitButton();
         });
         
-        // Also handle form submission event
+        // Also handle form submission event on window load
         window.addEventListener('load', function() {
             const form = document.getElementById('form-531cc587-da1d-46f2-836a-56ffe92b8d05');
             if (form) {
                 form.addEventListener('submit', handleFormSubmit);
+                updateSubmitButton();
             }
         });
         
@@ -36552,6 +36685,111 @@ Your dream home is just a message away 🏡✨
         }
         */
     </script>
+
+    <!-- Form Validation Styles -->
+    <style>
+        .country-code-input {
+            border: none !important;
+            border-right: 1px solid #ddd !important;
+            margin-right: 0 !important;
+            color: #333 !important;
+            font-size: 14px !important;
+            outline: none !important;
+            background: transparent !important;
+            box-shadow: none !important;
+        }
+        
+        .country-code-input:focus {
+            border: none !important;
+            border-right: 1px solid #ddd !important;
+            background: transparent !important;
+            box-shadow: none !important;
+        }
+        
+        .phone-number-input {
+            border: none !important;
+            outline: none !important;
+            box-shadow: none !important;
+            width: 100% !important;
+            min-width: 150px !important;
+            max-width: none !important;
+            overflow: visible !important;
+            text-overflow: clip !important;
+            white-space: nowrap !important;
+        }
+        
+        .phone-number-input:focus {
+            border: none !important;
+            box-shadow: none !important;
+            outline: none !important;
+        }
+        
+        /* Ensure country code and phone input are visually connected */
+        .saCYsbx {
+            display: inline-flex !important;
+            align-items: stretch !important;
+        }
+        
+        /* Remove all borders from phone input container */
+        div[data-hook="form-field-phone_2bd8"] input,
+        div[data-hook="form-field-phone_2bd8"] .saCYsbx,
+        div[data-hook="form-field-phone_2bd8"] .saCYsbx input {
+            border: none !important;
+            box-shadow: none !important;
+        }
+        
+        /* Ensure phone input has enough space to show full numbers */
+        div[data-hook="form-field-phone_2bd8"] {
+            width: 100% !important;
+        }
+        
+        div[data-hook="form-field-phone_2bd8"] > div {
+            width: 100% !important;
+        }
+        
+        div[data-hook="form-field-phone_2bd8"] .saCYsbx {
+            width: auto !important;
+        }
+        
+        /* Make sure the input container doesn't constrain width */
+        div[data-hook="core-input-root"] {
+            width: 100% !important;
+            display: flex !important;
+            flex: 1 !important;
+        }
+        
+        /* Ensure phone input field can expand to show full numbers */
+        #form-field-input-e03ca00e-f290-4905-d9c9-2f65db4f87ff-comp-manpcqaj- {
+            width: 100% !important;
+            min-width: 150px !important;
+            max-width: none !important;
+            flex: 1 !important;
+        }
+        
+        /* Remove any width constraints from parent containers */
+        div[data-hook="form-field-phone_2bd8"] .saEaGeV,
+        div[data-hook="form-field-phone_2bd8"] .sY2V_td,
+        div[data-hook="form-field-phone_2bd8"] [data-hook="text-field-root"] {
+            width: 100% !important;
+            max-width: none !important;
+        }
+        
+        /* Ensure the grid column allows expansion */
+        div[style*="grid-column:8 / span 5"] {
+            min-width: 0 !important;
+        }
+        
+        #form-submit-button:disabled {
+            opacity: 0.5 !important;
+            cursor: not-allowed !important;
+            pointer-events: none !important;
+        }
+        
+        #form-submit-button:not(:disabled) {
+            opacity: 1 !important;
+            cursor: pointer !important;
+        }
+    </style>
 
     <!-- WhatsApp Sticky Icon -->
     <style>
