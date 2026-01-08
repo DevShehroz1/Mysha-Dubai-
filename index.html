@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <!-- HTTrack comments removed -->
@@ -24577,6 +24577,7 @@
                                                                                                                                                             aria-label="Phone. Phone"
                                                                                                                                                             type="tel"
                                                                                                                                                             class="srGUrPm  has-custom-focus phone-number-input"
+                                                                                                                                                            style="width: auto !important; min-width: 200px !important; max-width: none !important; overflow: visible !important; text-overflow: clip !important; flex: 1 1 auto !important;"
                                                                                                                                                             value="" />
                                                                                                                                                     </div>
                                                                                                                                                 </div>
@@ -36710,12 +36711,13 @@ Your dream home is just a message away 🏡✨
             border: none !important;
             outline: none !important;
             box-shadow: none !important;
-            width: 100% !important;
-            min-width: 150px !important;
+            width: auto !important;
+            min-width: 200px !important;
             max-width: none !important;
             overflow: visible !important;
             text-overflow: clip !important;
             white-space: nowrap !important;
+            flex: 1 1 auto !important;
         }
         
         .phone-number-input:focus {
@@ -36761,22 +36763,90 @@ Your dream home is just a message away 🏡✨
         /* Ensure phone input field can expand to show full numbers */
         #form-field-input-e03ca00e-f290-4905-d9c9-2f65db4f87ff-comp-manpcqaj- {
             width: 100% !important;
-            min-width: 150px !important;
+            min-width: 200px !important;
             max-width: none !important;
-            flex: 1 !important;
+            flex: 1 1 auto !important;
+            overflow: visible !important;
+            text-overflow: clip !important;
+            white-space: nowrap !important;
         }
         
         /* Remove any width constraints from parent containers */
-        div[data-hook="form-field-phone_2bd8"] .saEaGeV,
-        div[data-hook="form-field-phone_2bd8"] .sY2V_td,
-        div[data-hook="form-field-phone_2bd8"] [data-hook="text-field-root"] {
+        div[data-hook="form-field-phone_2bd8"] {
             width: 100% !important;
             max-width: none !important;
+            overflow: visible !important;
+        }
+        
+        div[data-hook="form-field-phone_2bd8"] > div {
+            width: 100% !important;
+            max-width: none !important;
+            overflow: visible !important;
+        }
+        
+        div[data-hook="form-field-phone_2bd8"] .saEaGeV,
+        div[data-hook="form-field-phone_2bd8"] .sY2V_td,
+        div[data-hook="form-field-phone_2bd8"] [data-hook="text-field-root"],
+        div[data-hook="form-field-phone_2bd8"] [data-hook="core-input-root"] {
+            width: 100% !important;
+            max-width: none !important;
+            overflow: visible !important;
+            min-width: 0 !important;
         }
         
         /* Ensure the grid column allows expansion */
         div[style*="grid-column:8 / span 5"] {
             min-width: 0 !important;
+            overflow: visible !important;
+            width: 100% !important;
+        }
+        
+        /* Force the input container to expand */
+        div[data-hook="core-input-root"] {
+            display: flex !important;
+            flex: 1 1 auto !important;
+            width: 100% !important;
+            min-width: 0 !important;
+            overflow: visible !important;
+        }
+        
+        /* Make sure the phone input takes available space */
+        .saCYsbx + input[type="tel"],
+        .saCYsbx + input.phone-number-input {
+            flex: 1 1 auto !important;
+            min-width: 200px !important;
+            width: auto !important;
+            max-width: none !important;
+        }
+        
+        /* Override any width constraints from Wix classes */
+        .srGUrPm,
+        .srGUrPm.phone-number-input {
+            width: auto !important;
+            min-width: 200px !important;
+            max-width: none !important;
+            overflow: visible !important;
+            text-overflow: clip !important;
+        }
+        
+        /* Ensure parent flex container allows expansion */
+        .saEaGeV.sumjC1u {
+            display: flex !important;
+            width: 100% !important;
+            min-width: 0 !important;
+            overflow: visible !important;
+        }
+        
+        /* Remove any overflow hidden from parent divs */
+        div[data-hook="form-field-phone_2bd8"] * {
+            overflow: visible !important;
+        }
+        
+        div[data-hook="form-field-phone_2bd8"] [data-hook="text-field-root"],
+        div[data-hook="form-field-phone_2bd8"] [data-hook="core-input-root"],
+        div[data-hook="form-field-phone_2bd8"] .saEaGeV {
+            overflow: visible !important;
+            width: 100% !important;
         }
         
         #form-submit-button:disabled {
